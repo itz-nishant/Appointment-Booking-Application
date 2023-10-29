@@ -1,0 +1,65 @@
+/* Style for the verification page container */
+.verification-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+}
+
+/* Style for the verification container */
+.verification-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff; /* Set your desired background color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the verification message */
+.verification-message {
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+
+.login-link-text {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+.login-link-text:hover {
+  text-decoration: underline;
+}
+
+.back-button {
+  margin-top: 15px;
+  background: linear-gradient(to top, #3d8ad7, #0864af);
+  color: #fff;
+  padding: 3px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: linear-gradient(to bottom, #3d8ad7, #0864af);
+}
+
+.resend-button {
+  background-color: #3d8ad7; 
+  color: #fff; 
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* .resend-button:hover {
+  background-color: #0864af;
+} */

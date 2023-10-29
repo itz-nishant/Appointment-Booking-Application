@@ -1,0 +1,21 @@
+<div class="verification-page">
+  <div class="verification-container">
+    <h2>Verification</h2>
+    <p class="verification-message">
+      Please check your inbox for the verification email.
+    </p>
+    <p class="verification-message">
+      Once verified, you can <a routerLink="/login" class="login-link-text">Login</a>.
+    </p>
+    <div>
+      <button mat-raised-button color="primary" class="resend-button" [disabled]="resendDisabled" (click)="resendVerificationEmail()">
+        Resend Verification Email<span *ngIf="resendDisabled"> ({{ timer }}s)</span>
+      </button>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" routerLink="/register" class="back-button">
+        Back
+      </button>
+    </div>
+  </div>
+</div>

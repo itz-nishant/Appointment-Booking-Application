@@ -1,0 +1,130 @@
+.registration-page {
+  background-image: url("../../../assets/appoinment-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end; 
+  padding: 8px 40px;
+  /* padding: 11px 13px; */
+
+}
+
+.registration-container {
+  max-width: 400px;
+  padding: 13px 20px;
+  /* padding: 0px 20px; */
+  background-color: #f5f5f5;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 550;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-label {
+  color: #333;
+}
+
+.mat-input-element {
+  font-size: 16px;
+}
+
+.mat-input-ripple {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mat-error {
+  font-size: 14px;
+  color: #d9534f;
+  margin-top: 1px;
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login-link-text {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.login-link-text:hover {
+  text-decoration: underline;
+}
+
+.toggle-password-icon {
+  margin-bottom: 4.5px;
+}
+
+.password-strength-meter.custom-meter {
+  margin-bottom: 5px;
+}
+
+.password-strength-label {
+  font-size: 15px;
+  text-align: left;
+  margin-left: 3px;
+  margin-top: -35px;
+  margin-bottom: 15px;
+}
+
+.password-strength-label.weak {
+  color: red;
+}
+
+.password-strength-label.moderate {
+  color: orange;
+}
+
+.password-strength-label.strong {
+  color: green;
+}
+
+@media screen and (max-width: 900px) {
+  .registration-page {
+      background-image: none;
+      justify-content: center;
+      padding: 20px 40px;
+  }
+}

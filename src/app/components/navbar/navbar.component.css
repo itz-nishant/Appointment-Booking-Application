@@ -1,0 +1,182 @@
+.mat-toolbar {
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.mat-toolbar:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+.navbar-title {
+  font-size: 18px;
+  margin-right: auto;
+  font-family: cursive;
+  font-weight: 550;
+}
+
+.mat-button {
+  color: white;
+  margin-left: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.mat-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mat-button.active {
+  padding: 4px;
+  border-bottom: 2.5px solid #FFFFFF;
+  border-radius: 3px;
+  transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.active-notification {
+  padding: 10px 15px;
+  border-bottom: 2.5px solid #FFFFFF;
+  border-radius: 3px;
+  transition: border-bottom 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+
+.notification-badge {
+  line-height: 0;
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+.notification-badge:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.matMenu {
+  width: 170px;
+}
+
+.button_name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.profile-picture-container,
+.default-profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
+.profile_btn {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-left: 8px;
+}
+
+.no-picture {
+  color: white;
+  font-size: 16px;
+  font-family: cursive;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 810px) {
+  .mat-toolbar {
+    padding: 0 8px;
+  }
+
+  .mat-button {
+    margin-left: 8px;
+  }
+}
+
+
+
+@media screen and (max-width: 750px) {
+  .mat-toolbar {
+    height: 56px;
+    padding: 0 4px;
+  }
+
+  .mat-button {
+    margin-left: 3px;
+  }
+
+  .navbar-title{
+    font-size: 15px;
+  }
+
+  .matMenu {
+    width: 150px;
+  }
+}
+
+
+
+@media screen and (max-width: 620px) {
+
+  .mat-toolbar {
+    height: 50px;
+    padding: 0;
+  }
+
+  .mat-button {
+    margin-left: 0;
+    font-size: 13px;
+    padding: 0px 4px;
+  }
+
+  .mat-button.active {
+    padding: 0;
+  }
+
+  .active-notification {
+    padding: 4px 12px;
+  }
+
+  .navbar-title{
+    font-size: 12px;
+  }
+
+  .mat-icon {
+    font-size: 20px;
+  }
+
+  .matMenu {
+    width: 140px;
+  }
+
+}
+
+
+

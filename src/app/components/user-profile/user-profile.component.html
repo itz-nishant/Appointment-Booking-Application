@@ -1,0 +1,51 @@
+<div class="user-profile-container">
+  <div class="profile-header">
+    <h2>Profile</h2>
+  </div>
+  <div class="profile-picture-container">
+    <button class="delete-icon" *ngIf="profilePictureUrl" (click)="deleteProfilePicture()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <label class="edit-profile-pic-label" for="profile-pic-input">
+      <mat-icon class="edit-icon">edit</mat-icon>
+    </label>
+    <div *ngIf="profilePictureUrl; else showInitials" class="profile-picture" [style.backgroundImage]="'url(' + profilePictureUrl + ')'"></div>
+    <ng-template #showInitials>
+      <div class="profile-picture" [style.backgroundColor]="backgroundColor">
+        {{ getInitialLetter(name) }}
+      </div>
+    </ng-template>
+    <input type="file" (change)="onProfilePictureChange($event)" id="profile-pic-input" style="display: none;">
+  </div>
+
+  <div class="profile-form">
+    <div class="form-field">
+      <span *ngIf="!editingMode">{{ name }}</span>
+      <input *ngIf="editingMode" type="text" [(ngModel)]="name" />
+      <span class="edit-name-email-icon" *ngIf="!editingMode" (click)="editingMode = true">
+        <i class="pi pi-user-edit"></i>
+      </span>
+    </div>
+
+    <div class="form-field">
+      <span>{{ email }}</span>
+    </div>
+
+    <button mat-raised-button color="primary" type="button" class="update-button" (click)="updateProfile()">
+      Update Profile
+    </button>
+  </div>
+
+  <div class="user-actions">
+    <button (click)="showChangePasswordForm()" class="action-button">Change Password</button>
+    <button (click)="deleteAccount()" class="action-button delete-button">Delete Account</button>
+  </div>
+
+  <div *ngIf="loading" class="overlay">
+    <img src="./../../../assets/loader-circle-blue.gif" alt="Loading" class="loader-image">
+  </div>
+
+  <div *ngIf="uploadingProfilePicture" class="overlay">
+    <img src="./../../../assets/loader-circle-blue.gif" alt="Loading" class="loader-image">
+  </div>
+</div>

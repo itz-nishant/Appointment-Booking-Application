@@ -1,0 +1,47 @@
+<h2>APPOINTMENTS</h2>
+
+<div class="loader-container" *ngIf="isLoading; else appointmentList">
+  <img src="./../../../assets/loader-circle-blue.gif" alt="Loading" class="loader-image">
+</div>
+
+<ng-template #appointmentList>
+  <div class="grid-container">
+    <div class="form-field full-width">
+      <input id="searchInput" [(ngModel)]="searchTerm" class="search-input" placeholder="Enter a name to search" (input)="filterAppointments()">
+      <div class="search-icon"><mat-icon>search</mat-icon></div>
+    </div>
+
+    <div *ngIf="filteredAppointments.length > 0; else noAppointments">
+      <div class="grid-item" *ngFor="let appointment of filteredAppointments.slice(first, first + rows); let i = index">
+        <div class="appointment-item">
+          <div class="appointment-details">
+            <span class="appointment-label">Name:</span>
+            <span class="appointment-value">{{ appointment.name }}</span>
+          </div>
+          <div class="appointment-details">
+            <span class="appointment-label">Email:</span>
+            <span class="appointment-value">{{ appointment.email }}</span>
+          </div>
+          <div class="appointment-details">
+            <span class="appointment-label">Date:</span>
+            <span class="appointment-value">{{ appointment.selectedDate | date: 'd MMM, yyyy' }}</span>
+          </div>
+
+          <div class="appointment-icons">
+            <mat-icon class="edit-icon" (click)="editAppointment(appointment)">edit</mat-icon>
+            <mat-icon class="cancel-icon" (click)="cancelAppointment(appointment)">cancel</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noAppointments>
+      <p class="no-appointments-message" *ngIf="!searchTerm && !isLoading">No appointments available</p>
+      <p class="no-appointments-message" *ngIf="searchTerm && !isLoading">No matching appointments found</p>
+    </ng-template>
+
+    <div class="flex-auto" *ngIf="filteredAppointments.length > 0">
+      <p-paginator #paginator [rows]="rows" [totalRecords]="totalRecords" [rowsPerPageOptions]="[1, 3, 5]" (onPageChange)="onPageChange($event)"></p-paginator>
+    </div>
+  </div>
+</ng-template>

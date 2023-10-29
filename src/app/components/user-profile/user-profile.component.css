@@ -1,0 +1,310 @@
+.user-profile-container {
+  width: 500px; 
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  position: relative;
+  border: 1px solid #007bff;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin-bottom: 10px;
+}
+
+.profile-header h2 {
+  font-size: 30px;
+  color: #333;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 550;
+  margin-top: 10px;
+}
+
+.profile-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.profile-picture-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-family:cursive;
+  font-weight: bold;
+  color: white;
+  border: 3px solid #4295ed;
+}
+
+
+.edit-icon {
+  position: absolute;
+  bottom: -19px;
+  right: calc(50% - 17px);
+  cursor: pointer;
+  margin-bottom: 7px;
+  background-color: #4295ed;
+  padding: 5px;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.edit-name-email-icon {
+  position: absolute;
+  top: 13rem; 
+  /* top: 13.5rem;  */
+  right: 19px; 
+  cursor: pointer;
+  background-color: #4295ed;
+  padding: 5px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+.form-field {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.form-field input {
+  font-size: 16px;
+  padding: 7px; 
+  width: 70%;
+  text-align: center;
+  border: 2px solid #4295ed; 
+  border-radius: 5px; 
+  outline: none; 
+}
+
+.form-field input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(66, 133, 237, 0.7);
+}
+
+.file-upload {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.file-upload label {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-upload label:hover {
+  background-color: #0056b3;
+}
+
+.update-button {
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  color: #fff;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+  /* margin-top: 10px; */
+}
+
+.update-button:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.action-button {
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.user-profile-container button {
+  width: 50%;
+}
+
+.action-button:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+.delete-button {
+  background: linear-gradient(to right, #ff6759, #f02f2c);
+}
+
+.delete-button:hover {
+  background: linear-gradient(to left, #ff6759, #f02f2c);
+}
+
+.action-button {
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.user-profile-container button {
+  width: 50%;
+}
+
+.action-button:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+.delete-button {
+  background: linear-gradient(to right, #ff6759, #f02f2c);
+}
+
+.delete-button:hover {
+  background: linear-gradient(to left, #ff6759, #f02f2c);
+}
+
+.delete-icon {
+  position: absolute;
+  top: -12px;
+  right: 55px;
+  color: #ff0000;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  z-index: 1; 
+}
+
+.image-cropping-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: #fff;
+  width: 48%;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: #fff;
+  width: 48%; 
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button:hover {
+  background-color: #f34c41;
+}
+
+.image-cropper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-cropping-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: #fff;
+  width: 48%;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: #fff;
+  width: 48%;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.cancel-button:hover {
+  background-color: #f34c41;
+}
+
+@media screen and (max-width: 750px) {
+  .user-profile-container {
+    width: 450px;
+  }
+}
+
+

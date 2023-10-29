@@ -1,0 +1,16 @@
+<div class="cropper-container">
+  <image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 3"
+    format="png"
+    (imageCropped)="imageCropped($event)"
+  ></image-cropper>
+  <div>
+    <mat-icon class="close-icon" (click)="cancel()">cancel</mat-icon>
+  </div>
+</div>
+<div class="cropper-buttons">
+  <button mat-stroked-button color="primary" (click)="saveCroppedImage()">Crop</button>
+  <button mat-stroked-button color="warn" (click)="cancel()">Cancel</button>
+</div>

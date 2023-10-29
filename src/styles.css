@@ -1,0 +1,94 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'primeng/resources/themes/saga-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-width: 530px;
+}
+
+.success-notification {
+  background: linear-gradient(
+    to right,
+    #57a94e,
+    #046404
+  );
+  color: white;
+}
+
+.error-notification {
+  background: linear-gradient(
+    to right,
+    #d9534f,
+    #6e0603
+  );
+  color: white;
+}
+
+.error-notification {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.background-image {
+  background-image: url("assets/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+
+  
+} 
+
+.toggle-password-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+  color: #666565;
+  transform: translateY(-50%);
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+  border-radius: 50%; 
+  transition: background-color 0.3s ease; 
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page:hover {
+  background-color: #4f9aeb !important;
+  color: #fff !important; 
+}
+
+.loader-image {
+  width: 80px;
+  height: 80px;
+}
+
+.dark-mode {
+  /* filter:grayscale(70%); */
+  /* filter:invert(90%); */
+  filter:saturate(10%);
+  /* background-color: #383838; */
+  /* text-color: #fff; */
+}
+

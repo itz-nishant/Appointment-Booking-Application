@@ -1,0 +1,51 @@
+<div class="registration-page">
+    <div class="registration-container">
+      <h2>REGISTRATION</h2>
+        <form (submit)="register(registrationForm)" #registrationForm="ngForm" novalidate class="registration-form">
+            <mat-form-field appearance="outline" class="form-field full-width">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" [(ngModel)]="name" name="name" required>
+                <mat-error *ngIf="registrationForm.controls['name'].hasError('required')"> Name is required </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form-field full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" [(ngModel)]="email" name="email" required email>
+                <mat-error *ngIf="registrationForm.controls['email'].hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="registrationForm.controls['email'].hasError('email')">Invalid email format</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form-field full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="{{ showPassword ? 'text' : 'password' }}" placeholder="Password"
+                  [(ngModel)]="password" name="password" required minlength="6" (keyup)="checkPasswordStrength()">
+              
+                <div>
+                  <mat-icon matSuffix class="toggle-password-icon" (click)="togglePasswordVisibility()">
+                    {{ showPassword ? 'visibility_off' : 'visibility' }}
+                  </mat-icon>
+                </div>
+                <mat-error *ngIf="registrationForm.controls['password'].hasError('required')">Password is required
+                  (minimum 6 characters)</mat-error>
+              </mat-form-field>
+              <div class="password-strength-label" *ngIf="passwordStrength && password" [ngClass]="passwordStrength.toLowerCase()">
+                <div class="password-strength-meter custom-meter" [ngClass]="passwordStrength.toLowerCase()">
+                  <mat-password-strength [password]="password" *ngIf="password"></mat-password-strength>
+                </div>
+                {{ passwordStrength }} Password
+              </div>
+              
+              
+              
+
+
+            <button mat-raised-button color="primary" type="submit" class="submit-button">
+                <span>Register</span>
+            </button>
+
+            <div class="overlay" *ngIf="isLoading">
+                <img src="./../../../assets/loader-circle-blue.gif" alt="Loading" class="loader-image">
+            </div>          
+
+        </form>
+        <p class="login-link">Already have an account? <a routerLink="/login" class="login-link-text">Login</a></p>
+    </div>
+</div>

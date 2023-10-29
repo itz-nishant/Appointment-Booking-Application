@@ -1,0 +1,68 @@
+<mat-toolbar color="primary">
+  
+  <span class="navbar-title">APPOINTMENT BOOKING</span>
+
+  <ng-container *ngIf="isAuthenticated; else authContent">
+    <ng-container *ngIf="windowWidth <= 750; else showTextLinks">
+      <a mat-button routerLink="/home" routerLinkActive="active" matTooltip="Home">
+        <mat-icon>home</mat-icon>
+      </a>
+      <a mat-button routerLink="/appointment" routerLinkActive="active" matTooltip="Appointment">
+        <mat-icon>event</mat-icon>
+      </a>
+    </ng-container>
+    <ng-template #showTextLinks>
+      <a mat-button routerLink="/home" routerLinkActive="active">HOME</a>
+      <a mat-button routerLink="/appointment" routerLinkActive="active">APPOINTMENT</a>
+    </ng-template>
+    
+
+
+    <div class="notification-badge" [class.active-notification]="isActive('/notifications')" mat-button
+      matBadge="{{ unreadNotificationCount }}" matBadgeColor="warn" (click)="clearUnreadCount()" matBadgeSize="small"
+      matBadgeHidden="{{ unreadNotificationCount === 0 }}" matTooltip="Notifications" routerLink="/notifications">
+      <mat-icon>notifications</mat-icon>
+    </div>
+
+    <button mat-button (click)="toggleDarkMode()" matTooltip="Change Mode">
+      <mat-icon *ngIf="darkModeService.getIsDarkMode()">nights_stay</mat-icon>
+      <mat-icon *ngIf="!darkModeService.getIsDarkMode()">wb_sunny</mat-icon>
+    </button>
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      <div class="profile_btn">
+        <ng-container *ngIf="profilePictureUrl; else noProfilePicture">
+          <div class="profile-picture-container">
+            <img [src]="profilePictureUrl" class="profile-picture">
+          </div>
+        </ng-container>
+        <ng-template #noProfilePicture>
+          <div class="profile-picture-container no-picture" [style.backgroundColor]="backgroundColor">
+            {{ getInitialLetter(userName) }}
+          </div>
+        </ng-template>
+        <span class="user-name">{{ userName }}</span>
+        <mat-icon>expand_more</mat-icon>
+      </div>
+    </button>
+  </ng-container>
+
+  <ng-template #authContent>
+    <a mat-button routerLink="/login" routerLinkActive="active">LOGIN</a>
+    <a mat-button routerLink="/register" routerLinkActive="active">REGISTER</a>
+  </ng-template>
+</mat-toolbar>
+
+
+
+<mat-menu #userMenu="matMenu">
+  <div class="matMenu">
+    <button mat-menu-item routerLink="/profile">
+      <mat-icon>account_circle</mat-icon>
+      <span class="button_name">Profile</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span class="button_name">Logout</span>
+    </button>
+  </div>
+</mat-menu>

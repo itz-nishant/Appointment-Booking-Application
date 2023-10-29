@@ -1,0 +1,27 @@
+<h2>NOTIFICATIONS</h2>
+
+<div class="loader-container" *ngIf="isLoading; else notificationList">
+  <img src="./../../../assets/loader-circle-blue.gif" alt="Loading" class="loader-image">
+</div>
+
+<ng-template #notificationList>
+  <div *ngIf="notifications.length === 0 && !isLoading; else hasNotifications">
+    <p class="no-notifications-message">No notifications available</p>
+  </div>
+
+  <ng-template #hasNotifications>
+    <mat-card *ngFor="let notification of notifications" class="notification-card">
+      <mat-card-content>
+        <div [class.read]="notification.isRead" class="notification-text">
+          <span class="sender">{{ notification.sender }}:</span>
+          {{ notification.message }}
+        </div>
+        <div class="timestamp">{{ notification.timestamp | date:'shortTime' }}</div>
+      </mat-card-content>
+    </mat-card>
+
+    <button class="clear-button" mat-raised-button color="warn" (click)="clearNotifications()" *ngIf="notifications.length > 0">
+      Clear Notifications
+    </button>
+  </ng-template>
+</ng-template>

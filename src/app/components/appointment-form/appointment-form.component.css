@@ -1,0 +1,83 @@
+.outer-container {
+  background-image: url("../../../assets/main-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start; 
+  padding: 36px 58px; 
+  /* padding: 10px 33px;  */
+}
+
+.appointment-container {
+  width: 400px;
+  padding: 13px 20px;
+  background-color: #f5f5f5;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mat-form-field .mat-input-element {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.mat-datepicker-toggle {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 550;
+}
+
+.mat-error {
+  font-size: 14px;
+  color: #d9534f;
+  margin-top: 1px;
+}
+
+.input-field {
+  margin-top: 15px;
+  display: block;
+}
+
+.submit-button {
+  background: linear-gradient(to right, #3d8ad7, #0864af);
+  padding: 4px 8px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 25px;
+  width: 80%; /* Button takes up full width of its container */
+  margin-top: 20px; /* Space between the button and other elements */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to left, #3d8ad7, #0864af);
+}
+
+@media screen and (max-width: 900px) {
+  .outer-container {
+      background-image: none;
+      justify-content: center;
+      align-items: center;
+  }
+
+}
+
